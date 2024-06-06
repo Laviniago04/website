@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeodoriuOvid - Portofoliu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stiluri.css">
+    <style>
+        body {
+           background: linear-gradient(to right, #87CEFA, #32CD32);
+            color: #333; /* Text negru */
+            font-family: 'Arial', sans-serif; /* Font elegant */
+        }
+        .navbar-brand img {
+            max-height: 50px; /* Înălțimea maximă a logo-ului */
+        }
+        .navbar-nav .nav-link {
+            font-size: 18px; /* Dimensiune text link-uri */
+        }
+        .hero {
+            background-position: center;
+            height: 50vh; /* Înălțimea secțiunii de erou */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black; 
+        }
+        .hero h1 {
+            font-size: 3rem; /* Dimensiune titlu mare */
+            margin-bottom: 20px;
+        }
+        .album-section {
+            padding: 1px 2px;
+            text-align: center;
+        }
+        .album-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .card {
+            border: 2px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 0 15px 15px;
+        }
+        .btn-primary {
+            background-color: #333; /* Culoare buton */
+            border-color: #333; /* Culoare contur buton */
+            font-size: 18px; /* Dimensiune text buton */
+            padding: 10px 30px; /* Spațiere în interiorul butonului */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="imagini/LOGO.png.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item active"><a class="nav-link" href="portofoliu.html">Portofoliu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="hero">
+        <div>
+            <h1>Portofoliul Meu</h1>
+        </div>
+    </section>
+    <section class="album-section">
+        <h1>Albume</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="imagini/ppoze/natura/pasare.jpg" alt="Album 1">
+                        <div class="card-body">
+                            <h2>Natură</h2>
+                            <a href="album.html?album=natura" class="btn btn-primary">Vezi albumul</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="imagini/ppoze/portret/ea.jpg" alt="Album 2">
+                        <div class="card-body">
+                            <h2>Portrete</h2>
+                            <a href="album.html?album=portret" class="btn btn-primary">Vezi albumul</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="imagini/ppoze/nunta/inele.jpg" alt="Album 3">
+                        <div class="card-body">
+                            <h2>Nunți/Cununii</h2>
+                            <a href="album.html?album=nunta" class="btn btn-primary">Vezi albumul</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adaugă mai multe albume conform necesităților -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

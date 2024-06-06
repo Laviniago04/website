@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeodoriuOvid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stiluri.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #A0EFA0,#1E90FF);
+            color: #333; /* Text negru */
+            font-family: 'Roboto', sans-serif; /* Font elegant */
+            margin: 0; /* Eliminăm marginile implicite ale corpului */
+            padding: 0; /* Eliminăm orice padding implicite ale corpului */
+        }
+        .navbar-brand img {
+            max-height: 50px; /* Înălțimea maximă a logo-ului */
+        }
+        .navbar-nav .nav-link {
+            font-size: 15px; /* Dimensiune text link-uri */
+        }
+        .hero {
+            height: 50vh;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-left: 20px;
+            text-align: left;
+            color: black;
+        }
+        .hero h1 {
+            font-size: 2.3rem; /* Dimensiune titlu mare */
+            margin-bottom: 50px;
+        }
+        .hero h2 {
+            font-size: 1.5rem; /* Dimensiune subtitlu */
+            margin-bottom: 40px; /* Spațiere între subtitlu și buton */
+            margin-left: 90px;
+        }
+        .btn-primary {
+            background-color: #333; /* Culoare buton */
+            border-color: #007bff; /* Culoare contur buton */
+            font-size: 18px; /* Dimensiune text buton */
+            padding: 10px 30px; /* Spațiere în interiorul butonului */
+            margin-left: 170px;
+        }
+        footer {
+            background-color: white; /* Fundal alb */
+            color: black; /* Text negru */
+            text-align: center;
+            position: fixed; /* Poziționare fixă */
+            bottom: 0; /* Plasare la partea de jos a paginii */
+            width: 100%; /* Lățime de 100% */
+            padding: 0px 0; /* Spațiere interior */
+        }
+        .rounded-image {
+            border-radius: 50%; /* Rotunjirea colțurilor pentru a crea un cerc */
+            overflow: hidden; /* Ascunde orice conținut care depășește forma circulară */
+            width: 250px; /* Lățimea imaginii */
+            height: 200px; /* Înălțimea imaginii */
+        }
+        .image-container {
+            position: absolute; /* Poziție absolută pentru a ne asigura că nu influențează layout-ul existent */
+            top: 110px; /* Distanța de la partea de sus */
+            right: 20px; /* Distanța de la partea dreaptă */
+			
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="imagini/LOGO.png.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Acasă</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="portofoliu.html">Portofoliu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="hero">
+        <div>
+            <h1>Ovid Teodoriu definește imaginea ta</h1>
+            <h2>Explorând frumusețea prin lentile</h2>
+            <a href="portofoliu.html" class="btn btn-primary">Vezi portofoliul</a>
+        </div>
+    </section>
+    <section class="image-container">
+        <img src="imagini/da.jpg" alt="Imagine cerc" class="rounded-image">
+    </section>
+	
+</main>
+
+<footer>
+    <p>&copy; 2024 TeodoriuOvid.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

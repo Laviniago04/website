@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stiluri.css">
+    <!-- Lightbox CSS -->
+   <!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <style>
+        body {
+           background: linear-gradient(to right,#87CEFA, #32CD32);
+            color: #333; /* Text negru */
+            font-family: 'Arial', sans-serif; /* Font elegant */
+        }
+        .navbar-brand img {
+            max-height: 50px; /* Înălțimea maximă a logo-ului */
+        }
+        .navbar-nav .nav-link {
+            font-size: 15px; /* Dimensiune text link-uri */
+        }
+        .album-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .album-container a {
+            display: inline-block;
+            margin: 10px;
+        }
+        .album-container img {
+            max-width: 300px;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="imagini/LOGO.png.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="portofoliu.html">Portofoliu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="album-container">
+        <h1 id="album-title">Album</h1>
+        <div id="album-images"></div>
+    </section>
+</main>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    // Albumele cu imaginile lor
+    const albums = {
+        'natura': [
+            'imagini/ppoze/natura/pasare.jpg',
+            'imagini/ppoze/natura/apa.jpg',
+            'imagini/ppoze/natura/lumini.jpg',
+			'imagini/ppoze/natura/nori.jpg',
+			'imagini/ppoze/natura/rasarit.jpg',
+			'imagini/ppoze/natura/frunza.jpg',
+			'imagini/ppoze/natura/flori.jpg',
+			'imagini/ppoze/natura/alee.jpg',
+			'imagini/ppoze/natura/zapada.jpg',
+			'imagini/ppoze/natura/roz.jpg',
+        ],
+        'portret': [
+		    'imagini/ppoze/portret/ea.jpg',
+            'imagini/ppoze/portret/bebe.jpg',
+            'imagini/ppoze/portret/eu.jpg',
+			'imagini/ppoze/portret/seara.jpg',
+			'imagini/ppoze/portret/studio.jpg',
+        ],
+        'nunta': [
+            'imagini/ppoze/nunta/inele.jpg',
+            'imagini/ppoze/nunta/moto.jpg',
+			'imagini/ppoze/nunta/castel.jpg',
+			'imagini/ppoze/nunta/eidoi.jpg',
+			'imagini/ppoze/nunta/cununie.jpg',
+        ]
+    };
+
+    // Funcția pentru încărcarea imaginilor din album
+    function loadAlbum(album) {
+        const albumTitle = document.getElementById('album-title');
+        const albumImages = document.getElementById('album-images');
+
+        // Setează titlul albumului
+        albumTitle.textContent = album.charAt(0).toUpperCase() + album.slice(1);
+
+        // Curăță imaginile anterioare
+        albumImages.innerHTML = '';
+
+        // Adaugă noile imagini
+        if (albums[album]) {
+            albums[album].forEach(src => {
+                const a = document.createElement('a');
+                a.href = src;
+                a.setAttribute('data-lightbox', album); // Setează același data-lightbox pentru navigare
+                const img = document.createElement('img');
+                img.src = src;
+                a.appendChild(img);
+                albumImages.appendChild(a);
+            });
+        } else {
+            albumImages.innerHTML = '<p>Albumul nu a fost găsit.</p>';
+        }
+    }
+
+    // Obține parametrii din URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const album = urlParams.get('album');
+
+    // Încarcă albumul selectat
+    if (album) {
+        loadAlbum(album);
+    } else {
+        document.getElementById('album-title').textContent = 'Niciun album selectat';
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</body>
+</html>
